@@ -68,7 +68,7 @@ export default function SpeakingModeSelection() {
               </View>
               <Text style={styles.cardTitle}>Luyện tập</Text>
               <Text style={styles.cardDescription}>
-                Ôn luyện để không gặp{"\n"}hạn
+                Ôn luyện để chinh phục Speaking
               </Text>
             </TouchableOpacity>
 
