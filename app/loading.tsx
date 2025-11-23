@@ -8,22 +8,33 @@ import { StyleSheet, View } from "react-native";
 export default function LoadingScreen() {
   const { user, loading } = useAuth();
 
-  useEffect(() => {
-    if (!loading) {
-      // Sau khi auth context đã load xong
-      const timer = setTimeout(() => {
-        if (user) {
-          // Đã đăng nhập -> đi đến tabs
-          router.replace("/(tabs)");
-        } else {
-          // Chưa đăng nhập -> đi đến login
-          router.replace("/(auth)/login");
-        }
-      }, 2000); 
+  // useEffect(() => {
+  //   if (!loading) {
+  //     // Sau khi auth context đã load xong
+  //     const timer = setTimeout(() => {
+  //       if (user) {
+  //         // Đã đăng nhập -> đi đến tabs
+  //         router.replace("/(tabs)");
+  //       } else {
+  //         // Chưa đăng nhập -> đi đến login
+  //         router.replace("/(auth)/login");
+  //       }
+  //     }, 2000); 
 
-      return () => clearTimeout(timer);
-    }
-  }, [user, loading]);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [user, loading]);
+
+
+  // Test tạm thời, bỏ qua login
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      router.replace("/(tabs)");
+    }, 2000); 
+
+    return () => clearTimeout(timer);
+  }, []);
+  // End test
 
   return (
     <LinearGradient

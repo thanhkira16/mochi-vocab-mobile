@@ -188,6 +188,14 @@ export default function HomeScreen() {
             <Text style={styles.quickActionIcon}>📝</Text>
             <Text style={styles.quickActionText}>My Notebook</Text>
           </TouchableOpacity>
+
+          <TouchableOpacity
+            style={[styles.quickActionCard, { backgroundColor: "#1E90FF" }]}
+            onPress={() => router.push("/speaking" as any)}
+          >
+            <Text style={styles.quickActionIcon}>🎤</Text>
+            <Text style={styles.quickActionText}>Speaking Room</Text>
+          </TouchableOpacity>
         </View>
       </View>
 
@@ -339,14 +347,15 @@ const styles = StyleSheet.create({
   },
   quickActionsContainer: {
     flexDirection: "row",
+    flexWrap: "wrap",
     justifyContent: "space-between",
+    gap: 12,
   },
   quickActionCard: {
-    flex: 1,
+    flexBasis: "48%",
     borderRadius: 12,
     padding: 20,
     alignItems: "center",
-    marginHorizontal: 6,
     elevation: 3,
     shadowColor: "#000",
     shadowOffset: { width: 0, height: 2 },

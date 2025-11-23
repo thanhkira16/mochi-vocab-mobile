@@ -27,13 +27,24 @@ export default function RootLayout() {
     <ThemeProvider value={colorScheme === "dark" ? DarkTheme : DefaultTheme}>
       <AuthProvider>
         <CourseProvider>
-          <Stack>
+          {/* <Stack>
             <Stack.Screen name="(auth)" options={{ headerShown: false }} />
             <Stack.Screen name="lesson/[id]" options={{ headerShown: false }} />
             <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
             <Stack.Screen name="+not-found" />
             <Stack.Screen name="loading" options={{ headerShown: false }} />
+          </Stack> */}
+
+          {/* Test tạm thời, bỏ qua login */}
+          <Stack initialRouteName="(tabs)">
+            <Stack.Screen name="(auth)" options={{ headerShown: false }} />
+            <Stack.Screen name="lesson/[id]" options={{ headerShown: false }} />
+            <Stack.Screen name="(tabs)" options={{ headerShown: false }} />
+            <Stack.Screen name="speaking" options={{ headerShown: false }} />
+            <Stack.Screen name="+not-found" />
+            <Stack.Screen name="loading" options={{ headerShown: false }} />
           </Stack>
+          {/* End test */}
         </CourseProvider>
       </AuthProvider>
       <StatusBar style="auto" />
