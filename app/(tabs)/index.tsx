@@ -190,10 +190,10 @@ export default function HomeScreen() {
           </TouchableOpacity>
 
           <TouchableOpacity
-            style={[styles.quickActionCard, { backgroundColor: "#1E90FF" }]}
+            style={[styles.quickActionCard, { backgroundColor: "#FF8C42" }]}
             onPress={() => router.push("/speaking" as any)}
           >
-            <Text style={styles.quickActionIcon}>🎤</Text>
+            <Text style={styles.quickActionIcon}>🎙️</Text>
             <Text style={styles.quickActionText}>Speaking Room</Text>
           </TouchableOpacity>
         </View>

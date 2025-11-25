@@ -2,13 +2,13 @@ import { LinearGradient } from "expo-linear-gradient";
 import { router } from "expo-router";
 import { Headphones, Trophy } from "lucide-react-native";
 import {
-    Dimensions,
-    Platform,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 const { width, height } = Dimensions.get("window");
@@ -38,7 +38,7 @@ export default function SpeakingModeSelection() {
         {/* Close button */}
         <TouchableOpacity
           style={styles.closeButton}
-          onPress={() => router.back()}
+          onPress={() => router.replace("/(tabs)")}
         >
           <Text style={styles.closeText}>×</Text>
         </TouchableOpacity>

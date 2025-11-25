@@ -5,14 +5,14 @@ import { router, useLocalSearchParams } from "expo-router";
 import { Pause, Volume2, X } from "lucide-react-native";
 import { useEffect, useState } from "react";
 import {
-    Dimensions,
-    Modal,
-    Platform,
-    StatusBar,
-    StyleSheet,
-    Text,
-    TouchableOpacity,
-    View,
+  Dimensions,
+  Modal,
+  Platform,
+  StatusBar,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 const { width } = Dimensions.get("window");
@@ -346,7 +346,7 @@ export default function SpeakingRoom() {
             )}
 
             {/* Mascot */}
-            <Text style={styles.mascot}>🎤</Text>
+            <Text style={styles.mascot}>🎙️</Text>
           </View>
 
           {/* Timer/Status Display */}
